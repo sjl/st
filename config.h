@@ -171,7 +171,8 @@ MouseKey mkeys[] = {
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
-static char *editscrollbackcmd[] = { "st-edit", NULL };
+static char *editscrollbackcmd[] = { "/home/sjl/src/dotfiles/bin/st-edit", NULL };
+static char *browscmd[] = { "/home/sjl/src/dotfiles/bin/st-brows", NULL };
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -189,6 +190,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
 
 	{ TERMMOD,              XK_M,           externalpipe,   { .v = editscrollbackcmd } },
+	{ TERMMOD,              XK_U,           externalpipe,   { .v = browscmd } },
 };
 
 /*
