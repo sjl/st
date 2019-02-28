@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Ubuntu Mono:size=11:antialias=true:autohint=true";
+static char *font = "Ubuntu Mono:size=10:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -171,6 +171,8 @@ MouseKey mkeys[] = {
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
+static char *editscrollbackcmd[] = { "st-edit", NULL };
+
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
@@ -185,6 +187,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
+
+	{ TERMMOD,              XK_M,           externalpipe,   { .v = editscrollbackcmd } },
 };
 
 /*
