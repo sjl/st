@@ -803,7 +803,7 @@ static Key key[] = {
 	{ XK_space,        Mod1Mask|ControlMask,           "\033[32;7u",  0,  0},
 	{ XK_space,        Mod1Mask|ControlMask|ShiftMask, "\033[32;8u",  0,  0},
 	{ XK_space,        Mod1Mask|ShiftMask,             "\033[32;4u",  0,  0},
-	{ XK_space,        ShiftMask,                      "\033[32;2u",  0,  0},
+	/* { XK_space,        ShiftMask,                      "\033[32;2u",  0,  0}, */
 	{ XK_0,            ControlMask,                    "\033[48;5u",  0,  0},
 	{ XK_A,            ControlMask|ShiftMask,          "\033[65;6u",  0,  0},
 	{ XK_B,            ControlMask|ShiftMask,          "\033[66;6u",  0,  0},
