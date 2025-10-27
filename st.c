@@ -2009,6 +2009,13 @@ sendbreak(const Arg *arg)
 }
 
 void
+sendstr(const Arg *arg)
+{
+	char *cmd = ((char **)arg->v)[0];
+	ttywrite(cmd, strlen(cmd), 1);
+}
+
+void
 tprinter(char *s, size_t len)
 {
 	if (iofd != -1 && xwrite(iofd, s, len) < 0) {
