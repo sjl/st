@@ -174,6 +174,8 @@ MouseKey mkeys[] = {
 
 static char *editscrollbackcmd[] = { "/home/sjl/src/dotfiles/bin/st-edit", NULL };
 static char *browscmd[] = { "/home/sjl/src/dotfiles/bin/st-brows", NULL };
+static char *cd_up_cmd[] = { "cd ..\n", NULL };
+static char *cd_back_cmd[] = { "cd -\n", NULL };
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -192,6 +194,8 @@ static Shortcut shortcuts[] = {
 
 	{ TERMMOD,              XK_M,           externalpipe,   { .v = editscrollbackcmd } },
 	{ TERMMOD,              XK_U,           externalpipe,   { .v = browscmd } },
+	{ Mod4Mask,             XK_minus,       sendstr,        { .v = cd_back_cmd } },
+	{ Mod4Mask,             XK_period,      sendstr,        { .v = cd_up_cmd } },
 };
 
 /*
